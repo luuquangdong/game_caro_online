@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".BoardGameActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RelativeLayout
+            android:id="@+id/rlPlayer1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/tvCompetitorTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvCompetitorTurn"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/tvCompetitorTurn"
+                android:text="60"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="20sp" />
+
+            <TextView
+                android:textColor="@android:color/holo_blue_light"
+                android:id="@+id/tvCompetitorTurn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCompetitorName"
+                android:layout_alignStart="@+id/tvCompetitorName"
+                android:text="lượt của đối thủ:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvCompetitorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="35dp"
+                android:text="Hello"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/tvReady"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="20sp"
+                android:layout_marginLeft="50dp"
+                android:layout_below="@+id/tvCompetitorName"
+                android:layout_toEndOf="@+id/tvCompetitorTime"
+                android:text="sẵn sàng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/llBoardGame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:gravity="center"/>
+        <RelativeLayout
+            android:id="@+id/rlPlayer2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/tvMyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Hello"
+                android:textSize="24sp" />
+            <TextView
+                android:textColor="@android:color/holo_blue_light"
+                android:id="@+id/tvMyTurn"
+                android:layout_alignStart="@+id/tvMyName"
+                android:layout_below="@+id/tvMyName"
+                android:textSize="20sp"
+                android:text="lượt của tôi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="@android:color/holo_blue_light"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:text="60"
+                android:layout_below="@+id/tvMyName"
+                android:layout_toEndOf="@+id/tvMyTurn"
+                android:id="@+id/tvMyTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:onClick="btStartGameClicked"
+                android:id="@+id/btStart"
+                android:text="Bắt đầu chơi"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/tvMyTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:onClick="btReadyClicked"
+                android:id="@+id/btReady"
+                android:text="Sẵn sàng"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/btStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </LinearLayout>

@@ -1,0 +1,2 @@
+rootProject.name='Caro Online Game'
+include ':app'
